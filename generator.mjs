@@ -1,5 +1,5 @@
 export const MIN_CENTS = 110;
-export const MAX_CENTS = 10000;
+export const MAX_CENTS = 1000;
 export const DURATION_MS = 3000;
 
 // Uniform random values to two decimal places; unrelated to any game round.

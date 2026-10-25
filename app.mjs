@@ -1,4 +1,4 @@
-import { randomCoefficient, DURATION_MS } from './generator.mjs';
+import { randomCoefficient, DURATION_MS } from './generator.mjs?v=range10';
 
 const copy = {
   ru: {

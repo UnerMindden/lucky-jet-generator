@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#0d071c">
-  <meta name="description" content="Генератор случайных коэффициентов: 1.10×–100.00×, анимация 3 секунды и переключатель RU / EN.">
+  <meta name="description" content="Генератор случайных коэффициентов: 1.10×–10.00×, анимация 3 секунды и переключатель RU / EN.">
   <title>Lucky Jet · Генератор</title>
   <link rel="icon" type="image/svg+xml" href="./assets/icon.svg">
   <link rel="stylesheet" href="./styles.css">
@@ -42,7 +42,7 @@
       <div class="coefficient-row" aria-hidden="true"><span id="coefficient">—.—</span><span id="multiplier" class="multiplier">×</span></div>
       <p class="result-hint" id="result-hint" data-i18n="idleHint">Нажми кнопку — начнём генерацию</p>
       <div class="progress-track" aria-hidden="true"><div class="progress-fill"></div></div>
-      <div class="result-details"><span><span class="tiny-dot"></span>1.10× — 100.00×</span><span class="duration"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="9" r="5" stroke="currentColor" stroke-width="1.3"/><path d="M6 1h4M8 6v3l2 1" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg><span data-i18n="duration">3 секунды</span></span></div>
+      <div class="result-details"><span><span class="tiny-dot"></span>1.10× — 10.00×</span><span class="duration"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="9" r="5" stroke="currentColor" stroke-width="1.3"/><path d="M6 1h4M8 6v3l2 1" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg><span data-i18n="duration">3 секунды</span></span></div>
       <p id="live-message" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></p>
     </section>
 
@@ -55,6 +55,6 @@
 
     <footer class="footer"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.2"/><path d="M8 7v4M8 4.8v.2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg><p data-i18n="notice">Случайные значения. Не прогноз игры.</p></footer>
   </main>
-  <script type="module" src="./app.mjs"></script>
+  <script type="module" src="./app.mjs?v=range10"></script>
 </body>
 </html>
