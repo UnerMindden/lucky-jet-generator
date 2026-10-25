@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0d071c">
+  <meta name="description" content="Генератор случайных коэффициентов: 1.10×–100.00×, анимация 3 секунды и переключатель RU / EN.">
+  <title>Lucky Jet · Генератор</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/icon.svg">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <main class="app" aria-labelledby="app-title">
+    <header class="header">
+      <div class="brand">
+        <svg class="brand-icon" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="m6 23 6-3 3-7 11-7-7 11-7 3-3 6-1-4-2 1Z" fill="currentColor"/><path d="m18 7 7-2-2 7M8 25l-2 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <span>LUCKY<span class="brand-jet">JET</span></span>
+      </div>
+      <div class="language-switch" role="group" aria-label="Язык интерфейса">
+        <button type="button" class="language-button" data-lang="ru" lang="ru" aria-label="Русский" aria-pressed="true">RU</button>
+        <button type="button" class="language-button" data-lang="en" lang="en" aria-label="English" aria-pressed="false">EN</button>
+      </div>
+    </header>
+
+    <section class="hero" aria-labelledby="app-title">
+      <div class="eyebrow"><span class="status-dot" aria-hidden="true"></span><span data-i18n="generatorLabel">ГЕНЕРАТОР</span></div>
+      <h1 id="app-title"><span data-i18n="headlineOne">Твой следующий</span><br><span class="headline-accent" data-i18n="headlineTwo">коэффициент.</span></h1>
+      <div class="character-stage" aria-hidden="true">
+        <div class="orbit-window"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div></div>
+        <div class="pilot-halo"></div>
+        <span class="star star-one">✦</span><span class="star star-two">✦</span><span class="star star-three">+</span>
+        <span class="flight-trail trail-one"></span><span class="flight-trail trail-two"></span>
+        <img class="pilot" src="./assets/jet-pilot.png" alt="" width="512" height="512" fetchpriority="high" decoding="async">
+        <span class="stage-caption">LUCKY JET</span>
+      </div>
+    </section>
+
+    <section class="generator" aria-labelledby="result-heading" data-state="idle">
+      <div class="result-topline"><h2 id="result-heading" data-i18n="resultLabel">Случайный коэффициент</h2></div>
+      <div class="coefficient-row" aria-hidden="true"><span id="coefficient">—.—</span><span id="multiplier" class="multiplier">×</span></div>
+      <p class="result-hint" id="result-hint" data-i18n="idleHint">Нажми кнопку — начнём генерацию</p>
+      <div class="progress-track" aria-hidden="true"><div class="progress-fill"></div></div>
+      <div class="result-details"><span><span class="tiny-dot"></span>1.10× — 100.00×</span><span class="duration"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="9" r="5" stroke="currentColor" stroke-width="1.3"/><path d="M6 1h4M8 6v3l2 1" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg><span data-i18n="duration">3 секунды</span></span></div>
+      <p id="live-message" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></p>
+    </section>
+
+    <button type="button" class="generate-button" id="generate-button">
+      <svg class="button-spark" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m11 1-7 10h5l-1 8 8-11h-5l1-7Z" fill="currentColor"/></svg>
+      <span id="button-label" data-i18n="generate">Получить сигнал</span>
+      <svg class="button-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="button-spinner" aria-hidden="true"></span>
+    </button>
+
+    <footer class="footer"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.2"/><path d="M8 7v4M8 4.8v.2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg><p data-i18n="notice">Случайные значения. Не прогноз игры.</p></footer>
+  </main>
+  <script type="module" src="./app.mjs"></script>
+</body>
+</html>
